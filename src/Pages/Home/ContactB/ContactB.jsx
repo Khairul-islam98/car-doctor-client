@@ -4,8 +4,8 @@ import { BiSolidMapPin } from "react-icons/bi";
 
 const ContactB = () => {
     return (
-        <div className='bg-[#151515] h-60 flex items-center justify-center rounded-xl my-14'>
-            <div className='flex gap-24 text-white'>
+        <div className='bg-[#151515] h-60 flex flex-col lg: items-center justify-center rounded-xl my-14'>
+            <div className='space-y-4 lg:flex gap-24  text-white'>
                 <div className='flex gap-3'>
                     <p className='text-5xl'><FcCalendar></FcCalendar></p>
                     <div>

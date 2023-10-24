@@ -4,9 +4,9 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 const Service = ({ service }) => {
     const { img, title, price } = service
     return (
-        <div className="relative flex flex-col text-gray-700 bg-white pt-4 shadow-md w-80 h-72 rounded-xl bg-clip-border">
-            <div className="relative  mx-4  overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
-                <img className='w-80'
+        <div className="relative flex  flex-col text-gray-700 bg-white pt-4 shadow-md w-80 h-72 rounded-xl bg-clip-border">
+            <div className="relative mx-4  overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
+                <img className='w-full h-full'
                     src={img}
                     alt="img-blur-shadow"
                     layout="fill"

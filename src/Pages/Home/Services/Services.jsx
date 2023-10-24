@@ -16,7 +16,7 @@ const Services = () => {
             <h2 className='text-3xl font-bold'>Our Service Area</h2>
             <p className='text-sm text-[#737373]'>the majority have suffered alteration in some form, by injected humour, or randomised <br /> words which don't look even slightly believable. </p>
             </div>
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 py-10 space-y-5'>
+            <div className='grid  justify-center md:grid-cols-2 lg:grid-cols-3 py-10 space-y-5'>
                 {
                     services.map(service => <Service key={service._id} service={service}></Service>)
                 }
