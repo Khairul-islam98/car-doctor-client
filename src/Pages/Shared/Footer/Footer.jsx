@@ -27,7 +27,7 @@ const Footer = () => {
                 </nav>
             </footer>
         </div>
-    );
+    )
 };
 
 export default Footer;
