@@ -30,7 +30,7 @@ const SignUp = () => {
                 <div >
                     <img className='' src={img} alt="" />
                 </div>
-                <div className="card flex-shrink-0 w-full max-w-sm ml-10  border">
+                <div className="card flex-shrink-0 w-full max-w-sm   border">
                     <h2 className='text-center font-semibold text-2xl mt-6'>sign Up</h2>
                     <form onSubmit={handleSignUp} className="card-body">
                         <div className="form-control">
