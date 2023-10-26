@@ -7,6 +7,7 @@ const Login = () => {
     const { signInUser } = useContext(AuthContext)
 
     const handleLogin = e => {
+        e.preventDefault()
         const form = e.target
         const email = form.email.value
         const password = form.password.value
@@ -45,7 +46,7 @@ const Login = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <input className='btn bg-[#FF3811] text-white' type="submit" value="Sign Up" />
+                            <input className='btn bg-[#FF3811] text-white' type="submit" value="Sign In" />
                         </div>
                         <p>Don't have account? <Link className='text-red-500' to='/signup'>Sign Up</Link></p>
                     </form>
