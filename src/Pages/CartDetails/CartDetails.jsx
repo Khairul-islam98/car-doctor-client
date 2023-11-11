@@ -2,17 +2,19 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import CartRow from './CartRow';
 import Swal from 'sweetalert2';
+import axios from 'axios';
 
 const CartDetails = () => {
     const { user } = useContext(AuthContext)
     const [orders, setOrders] = useState([])
     const url = `http://localhost:5001/orders?email=${user.email}`;
     useEffect(() => {
-        fetch(url)
-            .then(res => res.json())
+
+        axios.get(url, {withCredentials: true})
+        // fetch(url)
+        //     .then(res => res.json())
             .then(data => {
-                console.log(data);
-                setOrders(data)
+                setOrders(data.data)
             })
     }, [])
     const handleRemove = id => {
@@ -67,8 +69,8 @@ const CartDetails = () => {
     }
     return (
         <div>
-            <div className="overflow-x-auto w-full">
-                <table className="table w-full">
+            <div className="relative overflow-x-auto lg:w-full">
+                <table className="table-auto lg:w-full">
                     <tbody>
                         {
                             orders.map(order => <CartRow key={order._id} order={order}handleRemove={handleRemove} handleOrderConfirm={handleOrderConfirm}></CartRow>)
